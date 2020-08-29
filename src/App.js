@@ -18,7 +18,11 @@ const App = () =>
       animal: "Bird",
       breed: "Cockatiel"
     }),
-    React.createElement(Pet, { name: "Doink", animal: "Cat", breed: "Mixed" })
+    React.createElement(Pet, {
+      name: "Doink",
+      animal: "Cat",
+      breed: "Mixed"
+    })
   ]);
 
 ReactDOM.render(React.createElement(App), document.getElementById("root"));
