@@ -5,6 +5,14 @@ const useDropdown = (label, defaultState, options) => {
 
   const id = `use-dropdown-${label.replace(" ", "").toLowerCase()}`;
 
+  const opt = item => (
+    <option value={item} key={item}>
+      {item}
+    </option>
+  );
+
+  const selectOptions = options.map(opt);
+
   const Dropdown = () => (
     <label htmlFor={id}>
       <select
@@ -15,11 +23,7 @@ const useDropdown = (label, defaultState, options) => {
         disabled={!options.length}
       >
         <option value="">All</option>
-        {options.map(item => (
-          <option value={item} key={item}>
-            {item}
-          </option>
-        ))}
+        {selectOptions}
       </select>
     </label>
   );
