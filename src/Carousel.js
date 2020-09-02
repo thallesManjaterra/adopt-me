@@ -11,8 +11,14 @@ class Carousel extends React.Component {
       ? "http://placecorgi.com/600/600"
       : media.map(({ large }) => large);
 
-    return { phots };
+    return { photos };
   }
+
+  handleIndexClick = (event) => {
+    this.setState({
+      active: Number(event.target.dataset.index),
+    });
+  };
 
   render() {
     const { photos, active } = this.state;
