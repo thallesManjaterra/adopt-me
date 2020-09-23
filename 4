@@ -1,0 +1,28 @@
+import React from "react";
+import Pet from "./Pet";
+
+const Results = ({ pets }) => {
+  {
+    pets.length ? (
+      <h1>No results found</h1>
+    ) : (
+      Pet.map(
+        ({
+          name,
+          type,
+          id,
+          photos,
+          contact: {
+            address: { city, staste },
+          },
+          breeds: { primary },
+        }) =>
+          <Pet 
+            type
+          />
+      )
+    );
+  }
+};
+
+export default Results;
